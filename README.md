@@ -9,6 +9,15 @@ Install the RBT.Kentico.Xperience.Custom.Widgets.Repeater.1.0.0 NuGet Package to
 # Widget
 This is a widget which allows you to add a GoogleMap Widget to your screen with certain attributes that can be configured while adding. The properties that can be configured are:
 
+- IsVisible: Select IsVisible option to show/hide widget on page
+- PageTypeClassName: Select your desired Class Name
+- Path: Specifies the path of the selected pages. If you leave the path empty, the widget either loads all child pages or selects the current page(depending on the page type and configuration of the widget other properties)
+- ViewName: Configure the view with the corresponding page type-related fields and with the proper design after assigning the view path to this field(View Path). View path is being considered from 'Views/Shared/' path, just input the remaining path of a partial view without the extension. E.g.: Articles/_ArticleViewList
+- MaxItemsDisplayed: Specifies the maximum of pages to be loaded. At least as many pages as in the 'visible' value of the 'initialization script' property need to be specified. If empty, all possible pages will be selected.
+- OrderBy: Sets the value of the ORDER BY clause in the SELECT statement used to retrieve the content. You can specify only the columns common to all of the selected page types
+- Where: Optional, but add your desired column names to improve performance
+- ContentBefore: HTML content placed before the widget content. Can be used to display a header or add encapsulating code such as div tag
+- ContentAfter: HTML content placed after the widget content. Can be used to display a header or add encapsulating code such as div tag
 Select where on the page you would like the widget to appear.
 Click on the blue plus add widget icon
 Select the Repeater widget from the widget pop up
