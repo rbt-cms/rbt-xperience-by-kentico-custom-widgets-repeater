@@ -18,18 +18,29 @@ This is a widget which allows you to add a GoogleMap Widget to your screen with 
 - Where: Optional, but add your desired column names to improve performance
 - ContentBefore: HTML content placed before the widget content. Can be used to display a header or add encapsulating code such as div tag
 - ContentAfter: HTML content placed after the widget content. Can be used to display a header or add encapsulating code such as div tag
-Select where on the page you would like the widget to appear.
-Click on the blue plus add widget icon
-Select the Repeater widget from the widget pop up
-Once the widget is added to the page, hover over the added widget until it displays the properties and trash icons. Click on the gear-shaped properties icon.
-In the Repeater widget properties pop up adjust various settings including visibility, items per row, maximum items displayed and content source.
-Click Apply button to update the widget with selected properties. The properties pop up will automatically close.
 
-*Required fields
+
+
+# Add the Repeater widget to your project after installing the NuGet package
+
+Step 1: Insert the following code snippet into Program.cs and build the solution:
+
+"builder.Services.AddSingleton<IRepeaterRepository, RepeaterRepository>();"
+
+Step 2: Create a Repeater folder under /Components/Widgets/ in the project source code.
+
+Example: /Components/Widgets/Repeater
+
+Step 3: Copy the Articles.cshtml file from /Components/Widgets/Repeater in this repository and paste it into your project's /Components/Widgets/Repeater folder fodler :
+
+Step 4: If you need more views for Article or any new page type, create your own views as per your requirements
+
+Step 5: You can specify the view name in the View name widget property, e.g.: View name: Articles
+
 
 # Author
 
-This custom widget was created by @Ray Business Technologies Pvt Ltd. Last updated 14-03-2025
+This custom widget was created by @Ray Business Technologies Pvt Ltd. Last updated 18-03-2025
 
 # License
 

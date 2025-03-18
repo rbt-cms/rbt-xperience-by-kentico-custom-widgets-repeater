@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    <IsMvcProject>true</IsMvcProject>
+    <GenerateEmbeddedFileManifest>true</GenerateEmbeddedFileManifest>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>RBT.Kentico.Xperience.Custom.Widgets.Repeater</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Ray Business Technologies Pvt Ltd</Authors>
+    <Company>Ray Business Technologies</Company>
+    <Description>Displays the content of specified pages based on assigned views.    </Description>
+    <Copyright>Ray Business Technologies Pvt Ltd</Copyright>
+    <PackAsTool>False</PackAsTool>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>RBT.Kentico.Xperience.Custom.Widgets.Repeater</Title>
+    <PackageProjectUrl>https://github.com/rbt-cms/rbt-xperience-by-kentico-custom-widgets-repeater</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+  </PropertyGroup> 
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Kentico.Xperience.Admin" Version="29.4.0" />
+    <PackageReference Include="Kentico.Xperience.WebApp" Version="29.4.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Shared\" />
+  </ItemGroup>
+</Project>
