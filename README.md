@@ -23,19 +23,24 @@ This is a widget which allows you to add a GoogleMap Widget to your screen with 
 
 # Add the Repeater widget to your project after installing the NuGet package
 
-Step 1: Insert the following code snippet into Program.cs and build the solution:
+Follow these steps to integrate the **Repeater** widget into your project after installing the NuGet package.
 
-"builder.Services.AddSingleton<IRepeaterRepository, RepeaterRepository>();"
+Step 1: Configure Dependency Injection  
+Insert the following code snippet into `Program.cs` and build the solution:
+
+```
+builder.Services.AddSingleton<IRepeaterRepository, RepeaterRepository>();
+```
 
 Step 2: Create a Repeater folder under /Components/Widgets/ in the project source code.
 
-Example: /Components/Widgets/Repeater
+Example: ```/Components/Widgets/Repeater```
 
-Step 3: Copy the Articles.cshtml file from /Components/Widgets/Repeater in this repository and paste it into your project's /Components/Widgets/Repeater folder fodler :
+Step 3: Copy the Articles.cshtml file from ```/Components/Widgets/Repeater ``` in this repository and paste it into your project's ```/Components/Widgets/Repeater``` folder fodler :
 
 Step 4: If you need more views for Article or any new page type, create your own views as per your requirements
 
-Step 5: You can specify the view name in the View name widget property, e.g.: View name: Articles
+Step 5: You can specify the view name in the View name widget property,``` e.g.: View name: Articles```
 
 
 # Author
