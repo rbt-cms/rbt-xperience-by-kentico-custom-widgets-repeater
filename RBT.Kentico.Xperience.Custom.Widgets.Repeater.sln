@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35818.85 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RBT.Kentico.Xperience.Custom.Widgets.Repeater", "RBT.Kentico.Xperience.Custom.Widgets.Repeater.csproj", "{871FB81D-CC23-F050-FC66-90C8DB9E1E6E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{871FB81D-CC23-F050-FC66-90C8DB9E1E6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{871FB81D-CC23-F050-FC66-90C8DB9E1E6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{871FB81D-CC23-F050-FC66-90C8DB9E1E6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{871FB81D-CC23-F050-FC66-90C8DB9E1E6E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {38174E5B-06DD-4B66-8BD4-D57F52F4C5BC}
+	EndGlobalSection
+EndGlobal

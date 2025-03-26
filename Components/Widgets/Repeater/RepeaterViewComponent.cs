@@ -44,16 +44,15 @@ namespace RBT.Kentico.Xperience.Custom.Widgets.Repeater
                         selectedPath,
                         topN,
                         properties.OrderBy,
-                        properties.Where,
-                        cultureCode);
+                        cultureCode,
+                        properties.OrderDirection);
 
                     var viewModel = new RepeaterViewModel
-                    {                        
+                    {
                         ViewName = properties.ViewName,
                         PageTypeClassName = properties.PageTypeClassName,
                         PageTypeData = pageTypeData,
                         Visible = properties.IsVisible,
-                        Where = properties.Where,
                         HtmlAfter = properties.ContentAfter,
                         HtmlBefore = properties.ContentBefore
                     };

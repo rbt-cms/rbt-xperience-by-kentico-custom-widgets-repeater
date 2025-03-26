@@ -88,10 +88,11 @@ namespace RBT.Kentico.Xperience.Custom.Widgets.Repeater
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// Where
+        /// OrderDirection
         /// </summary>
-        [EditingComponent(TextInputComponent.IDENTIFIER, Label = "Where", Order = 6)]
-        public string Where { get; set; }
+        [EditingComponent(DropDownComponent.IDENTIFIER, Label = "OrderBy Direction", Order = 6)]
+        [EditingComponentProperty(nameof(DropDownProperties.DataSource), "Ascending;Ascending\r\nDescending;Descending")]
+        public string OrderDirection { get; set; } 
 
         /// <summary>
         /// ContentBefore

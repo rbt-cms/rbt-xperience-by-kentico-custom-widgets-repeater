@@ -14,7 +14,8 @@ namespace RBT.Kentico.Xperience.Custom.Models.Reusable.Repeater
         /// <param name="path">The content path to filter pages.</param>
         /// <param name="maxItems">The maximum number of items to retrieve.</param>
         /// <param name="orderBy">The field by which to order the results.</param>
-        /// <param name="whereCondition">The raw where condition for filtering results.</param>
+        /// /// <param name="cultureCode">The raw where condition for filtering results.</param>
+        /// /// <param name="orderDirection">The raw where condition for filtering results.</param>
         /// <param name="cancellationToken">The cancellation token to cancel the request.</param>
         /// <returns>A list of dictionaries containing page data for the specified page type.</returns>
         Task<List<Dictionary<string, object>>> GetParticularPageTypeDataAsync(
@@ -22,8 +23,8 @@ namespace RBT.Kentico.Xperience.Custom.Models.Reusable.Repeater
             string path,
             int maxItems,
             string orderBy,
-            string whereCondition,
             string cultureCode,
+            string orderDirection,
             CancellationToken cancellationToken = default);
     }
 }

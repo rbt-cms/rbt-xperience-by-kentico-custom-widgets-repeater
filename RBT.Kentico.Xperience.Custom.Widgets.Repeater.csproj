@@ -12,7 +12,7 @@
     <Version>1.0.0</Version>
     <Authors>Ray Business Technologies Pvt Ltd</Authors>
     <Company>Ray Business Technologies</Company>
-    <Description>Displays the content of specified pages based on assigned views.    </Description>
+    <Description>A Repeater widget is a commonly used component in Kentico CMS. It is used to display a collection of repeating elements dynamically based on configurations from widget properties.</Description>
     <Copyright>Ray Business Technologies Pvt Ltd</Copyright>
     <PackAsTool>False</PackAsTool>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>

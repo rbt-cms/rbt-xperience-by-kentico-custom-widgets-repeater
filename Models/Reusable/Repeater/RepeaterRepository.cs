@@ -22,22 +22,26 @@ public class RepeaterRepository : IRepeaterRepository
         _eventLogService = eventLogService ?? throw new ArgumentNullException(nameof(eventLogService));
     }
 
-    public async Task<List<Dictionary<string, object>>> GetParticularPageTypeDataAsync(string pageTypeClassName, string path, int maxItems, string orderBy, string whereCondition,string languageName, CancellationToken cancellationToken = default)
+    public async Task<List<Dictionary<string, object>>> GetParticularPageTypeDataAsync(string pageTypeClassName, string path, int maxItems, string orderBy, string languageName, string orderDirection, CancellationToken cancellationToken = default)
     {
         var pageData = new List<Dictionary<string, object>>();
+        var orderDirec = orderDirection == "Descending" ? OrderDirection.Descending : OrderDirection.Ascending;
+
 
         try
         {
+            orderBy = string.IsNullOrEmpty(orderBy) ? nameof(IWebPageFieldsSource.SystemFields.WebPageItemOrder) : orderBy;
             var builder = new ContentItemQueryBuilder();
             builder.ForContentType(pageTypeClassName, query =>
             {
                 query.ForWebsite(_channelContext.WebsiteChannelName, PathMatch.Children(path))
-                     .OrderBy(string.IsNullOrEmpty(orderBy) ? nameof(IWebPageFieldsSource.SystemFields.WebPageItemOrder) : orderBy)
                      .TopN(maxItems);
+
                 // Optional methods for global parametrization of their preceding queries
-            }).InLanguage(languageName);
+            }).InLanguage(languageName)
 
-
+             .Parameters(subqueryParameters =>
+                   subqueryParameters.OrderBy(new OrderByColumn(orderBy, orderDirec)));
             IEnumerable<IContentItemFieldsSource> result = await _contentQueryExecutor.GetMappedResult<IContentItemFieldsSource>(builder);
 
             foreach (var item in result)
@@ -58,3 +62,4 @@ public class RepeaterRepository : IRepeaterRepository
         return pageData;
     }
 }
+
